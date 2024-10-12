@@ -12,7 +12,6 @@ I am going to convert my docker-compose files to nix files. Also, converting bas
 ```
 cd ~
 git clone https://github.com/TheTechRun/public-nixos
-cd ~/nixos-config
 ```
 # Rename public-nixos directory to nixos-config:
 `mv ~/public-nixos ~/nixos-config`
@@ -36,9 +35,7 @@ cd ~/nixos-config
 ```
 cd ~
 git clone https://github.com/TheTechRun/public-nixos
-cd ~/nixos-config
 mv ~/public-nixos/ ~/nixos-config ~/
-rmdir ~/public-nixos
 sudo cp /etc/nixos/hardware-configuration.nix ~/nixos-config/modules/system/hardware-configuration.nix
 sudo ln -sf ~/nixos-config/flake.nix /etc/nixos/flake.nix
 find ~/nixos-config/ -type f -name "*.sh" -exec chmod +x {} +
