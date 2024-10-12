@@ -7,7 +7,7 @@
       isNormalUser = true;
       extraGroups = [ "nixuser" "wheel" "cups" "networkmanager" "scanner" "lp" "libvirtd" "docker" ];
       uid = 1000;  # It's good practice to explicitly set the UID
-      initialPassword = "abc123";  # Plain text password for testing BE SURE TO CHANGE IT
+      initialPassword = "abcde12345";  # Plain text password for testing BE SURE TO CHANGE IT
     };
     # Add Other Users
     #nixusertwo = {
