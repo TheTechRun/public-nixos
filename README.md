@@ -35,7 +35,7 @@ cd ~/nixos-config
 # All-in-one command:
 ```
 cd ~
-git clone https://github.com/TheTechRun/nixos-config
+git clone https://github.com/TheTechRun/public-nixos
 cd ~/nixos-config
 mv ~/public-nixos/nixos-config ~/
 rmdir ~/public-nixos
