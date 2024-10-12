@@ -54,8 +54,23 @@ sudo ln -sf ~/nixos-config/flake.nix /etc/nixos/flake.nix
 find ~/nixos-config/ -type f -name "*.sh" -exec chmod +x {} +
 sudo nixos-rebuild switch --flake $HOME/nixos-config
 ```
-
-# OPTIONAL - Run this script to replace the username with yours:
+# IMPORTANT IMPORTANT IMPORTANT - Run this script to replace the username with yours:
 `bash ~/nixos-config/replace-username.sh`
+
+# FAILURE TO RUN THIS SCRIPT WILL HAVE 
+
+# If you get Bootloader error (probably because your'e in a VM):
+### You need to go to ~/nixos-config/modules/system/configuration.nix and comment out the `systemD` bootloader lines and uncomment the `grub` bootloader lines. 
+### Then run: 
+`sudo nixos-rebuild switch --flake $HOME/nixos-config`
+
+# If you can not login it is because you didn't change the username in the IMPORTANT script mentioned above:
+Press `Control+Alt+F2` to enter tty.
+Enter your username and password.
+Run this command:
+`bash ~/nixos-config/replace-username.sh'
+
+
+
 
 

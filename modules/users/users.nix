@@ -7,14 +7,14 @@
       isNormalUser = true;
       extraGroups = [ "nixuser" "wheel" "cups" "networkmanager" "scanner" "lp" "libvirtd" "docker" ];
       uid = 1000;  # It's good practice to explicitly set the UID
+      initialPassword = "abc123";  # Plain text password for testing
     };
     # Add Other Users
     #nixusertwo = {
-     # isNormalUser = true;
-     # extraGroups = [ "nixusertwo" "cups" "networkmanager" ];
-     # uid = 1001;  
+    #  isNormalUser = true;
+    #  extraGroups = [ "nixusertwo" "cups" "networkmanager" ];
+    #  uid = 1001;  
     #};
-    
   };
 
   users.groups = {
@@ -23,7 +23,7 @@
     };
     # You can define other groups here as needed
     #nixusertwo = {
-     #  gid = 1001;
+    #  gid = 1001;
     #};
   };
 }
