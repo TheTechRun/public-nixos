@@ -63,11 +63,17 @@ sudo nixos-rebuild switch --flake $HOME/nixos-config
 `sudo nixos-rebuild switch --flake $HOME/nixos-config`
 
 # If you can not login it is because you didn't change the username in the IMPORTANT script mentioned above:
-Press `Control+Alt+F2` to enter tty.
+## You can either:
+### A: Keep using the `nixuser` user.
+### B: Press `Control+Alt+F2` to enter tty.
+
 username:`nixuser`
 password: `abcde12345`
-Run this command:
-`bash ~/nixos-config/replace-username.sh'
+### Run this command to change usernames:
+`bash ~/nixos-config/replace-username.sh`
+### Now rebuild:
+`sudo nixos-rebuild switch --flake $HOME/nixos-config`
+
 
 
 
