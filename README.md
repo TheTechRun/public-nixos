@@ -18,6 +18,9 @@ git clone https://github.com/TheTechRun/public-nixos
 # Rename public-nixos directory to nixos-config:
 `mv ~/public-nixos ~/nixos-config`
 
+# IMPORTANT IMPORTANT IMPORTANT - Run this script to replace the username with yours:
+`bash ~/nixos-config/replace-username.sh`
+
 # Enable Flakes in your configuration.nix:
 `sudo sed -i '$ i\  # Enable flakes.\n  nix.settings.experimental-features = [ "nix-command" "flakes" ];\n' /etc/nixos/configuration.nix`
 
