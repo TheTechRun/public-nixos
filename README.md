@@ -32,8 +32,9 @@ git clone https://github.com/TheTechRun/public-nixos
 `sudo nixos-rebuild switch --flake $HOME/nixos-config`
 
 # All-in-one command:
+
 ```
-nix-shell -p git
+nix-shell -p git &
 cd ~
 git clone https://github.com/TheTechRun/public-nixos
 mv ~/public-nixos/ ~/nixos-config
