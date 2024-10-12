@@ -14,11 +14,8 @@ cd ~
 git clone https://github.com/TheTechRun/public-nixos
 cd ~/nixos-config
 ```
-# Move nixos-config directory to home directory:
-```
-mv ~/public-nixos/nixos-config ~/
-rmdir ~/public-nixos
-```
+# Rename public-nixos directory to nixos-config:
+`mv ~/public-nixos ~/nixos-config`
 
 # Copy your hardware-config
 `sudo cp /etc/nixos/hardware-configuration.nix ~/nixos-config/modules/system/hardware-configuration.nix`
