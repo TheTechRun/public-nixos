@@ -19,7 +19,7 @@
         modules = [
           # Window Managers & Desktop Environments
           ./modules/desktop/wm/x11/i3.nix
-          ./modules/desktop/de/wayland/hyprland.nix
+          #./modules/desktop/de/wayland/hyprland.nix
           #./modules/desktop/wm/x11/dwm/dwm.nix
           #./modules/desktop/de/wayland/gnome.nix
           #./modules/desktop/de/x11/cinnamon.nix
