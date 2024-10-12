@@ -35,7 +35,7 @@ git clone https://github.com/TheTechRun/public-nixos
 ```
 cd ~
 git clone https://github.com/TheTechRun/public-nixos
-mv ~/public-nixos/ ~/nixos-config ~/
+mv ~/public-nixos/ ~/nixos-config
 sudo cp /etc/nixos/hardware-configuration.nix ~/nixos-config/modules/system/hardware-configuration.nix
 sudo ln -sf ~/nixos-config/flake.nix /etc/nixos/flake.nix
 find ~/nixos-config/ -type f -name "*.sh" -exec chmod +x {} +
