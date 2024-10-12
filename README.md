@@ -3,6 +3,8 @@
 
 ### This will install barebones i3wm with light-dm/slick-greeter. You can comment in and out whichever included desktop environment or window manager that you'd like. I will also be adding Sway and KDE nix files soon. 
 
+# IMPORTANT: If you already have a full setup, then make sure that you have iall of your nix files backed up. This can replace users and other important settings. 
+
 # Future plans:
 I am going to convert my docker-compose files to nix files. Also, converting bash files to nix as well. 
 
