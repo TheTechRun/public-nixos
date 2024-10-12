@@ -43,7 +43,7 @@ sudo nixos-rebuild switch
 ### Start a shell:
 `nix-shell -p git`
 
-### Now run:
+### Then run:
 ```
 cd ~
 git clone https://github.com/TheTechRun/public-nixos
@@ -66,7 +66,6 @@ sudo nixos-rebuild switch --flake $HOME/nixos-config
 username:`nixuser`
 
 password: `abcde12345`
-`
 
 
 
