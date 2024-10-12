@@ -37,7 +37,7 @@ cd ~/nixos-config
 cd ~
 git clone https://github.com/TheTechRun/public-nixos
 cd ~/nixos-config
-mv ~/public-nixos/nixos-config ~/
+mv ~/public-nixos/ ~/nixos-config ~/
 rmdir ~/public-nixos
 sudo cp /etc/nixos/hardware-configuration.nix ~/nixos-config/modules/system/hardware-configuration.nix
 sudo ln -sf ~/nixos-config/flake.nix /etc/nixos/flake.nix
