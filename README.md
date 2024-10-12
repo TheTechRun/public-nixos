@@ -31,10 +31,12 @@ git clone https://github.com/TheTechRun/public-nixos
 # Build Flake:
 `sudo nixos-rebuild switch --flake $HOME/nixos-config`
 
-# All-in-one command:
+# ALL-in-ONE command:
+### Start a shell:
+`nix-shell -p git`
 
+### Now run:
 ```
-nix-shell -p git &
 cd ~
 git clone https://github.com/TheTechRun/public-nixos
 mv ~/public-nixos/ ~/nixos-config
