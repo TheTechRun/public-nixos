@@ -18,8 +18,8 @@ git clone https://github.com/TheTechRun/public-nixos
 # Rename public-nixos directory to nixos-config:
 `mv ~/public-nixos ~/nixos-config`
 
-# IMPORTANT IMPORTANT IMPORTANT - Run this script to replace the username with yours:
-`bash ~/nixos-config/replace-username.sh`
+# Make all scripts executable:
+`find ~/nixos-config/ -type f -name "*.sh" -exec chmod +x {} +`
 
 # Enable Flakes in your configuration.nix:
 `sudo sed -i '$ i\  # Enable flakes.\n  nix.settings.experimental-features = [ "nix-command" "flakes" ];\n' /etc/nixos/configuration.nix`
@@ -35,9 +35,6 @@ sudo nixos-rebuild switch
 
 # Symlink flake:
 `sudo ln -sf ~/nixos-config/flake.nix /etc/nixos/flake.nix`
-
-# Make all scripts executable:
-`find ~/nixos-config/ -type f -name "*.sh" -exec chmod +x {} +`
 
 # Build Flake:
 `sudo nixos-rebuild switch --flake $HOME/nixos-config`
@@ -59,25 +56,16 @@ sudo ln -sf ~/nixos-config/flake.nix /etc/nixos/flake.nix
 find ~/nixos-config/ -type f -name "*.sh" -exec chmod +x {} +
 sudo nixos-rebuild switch --flake $HOME/nixos-config
 ```
-# IMPORTANT IMPORTANT IMPORTANT - Run this script to replace the username with yours:
-`bash ~/nixos-config/replace-username.sh`
 
 # If you get Bootloader error (probably because your'e in a VM):
 ### You need to go to ~/nixos-config/modules/system/configuration.nix and comment out the `systemD` bootloader lines and uncomment the `grub` bootloader lines. 
 ### Then run: 
 `sudo nixos-rebuild switch --flake $HOME/nixos-config`
 
-# If you can not login it is because you didn't change the username in the IMPORTANT script mentioned above:
-## You can either:
-### A: Keep using the `nixuser` user.
-### B: Press `Control+Alt+F2` to enter tty.
-
+# LOGIN:
 username:`nixuser`
 password: `abcde12345`
-### Run this command to change usernames:
-`bash ~/nixos-config/replace-username.sh`
-### Now rebuild:
-`sudo nixos-rebuild switch --flake $HOME/nixos-config`
+`
 
 
 
