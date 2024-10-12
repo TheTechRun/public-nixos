@@ -64,6 +64,7 @@ sudo nixos-rebuild switch --flake $HOME/nixos-config
 
 # LOGIN:
 username:`nixuser`
+
 password: `abcde12345`
 `
 
