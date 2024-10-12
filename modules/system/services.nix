@@ -10,7 +10,7 @@
     };
     flatpak.enable = true;
     usbmuxd.enable = true;
-    services.mpd.enable = true; # Music Player Demon
+    mpd.enable = true; # Music Player Demon
     # Commented out services
     # prowlarr.enable = true;
     # sonarr.enable = true;
