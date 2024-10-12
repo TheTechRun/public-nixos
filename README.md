@@ -33,6 +33,7 @@ git clone https://github.com/TheTechRun/public-nixos
 
 # All-in-one command:
 ```
+nix-shell -p git
 cd ~
 git clone https://github.com/TheTechRun/public-nixos
 mv ~/public-nixos/ ~/nixos-config
