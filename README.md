@@ -16,14 +16,14 @@ git clone https://github.com/TheTechRun/public-nixos
 # Rename public-nixos directory to nixos-config:
 `mv ~/public-nixos ~/nixos-config`
 
+# Enable Flakes in your configuration.nix:
+`sudo sed -i '$ i\  # Enable flakes.\n  nix.settings.experimental-features = [ "nix-command" "flakes" ];\n' /etc/nixos/configuration.nix`
+
 # Copy your hardware-config
 `sudo cp /etc/nixos/hardware-configuration.nix ~/nixos-config/modules/system/hardware-configuration.nix`
 
 # Symlink flake:
 `sudo ln -sf ~/nixos-config/flake.nix /etc/nixos/flake.nix`
-
-# Add this to configuration.nix to Enable Flakes (already done):
-`nix.settings.experimental-features = [ "nix-command" "flakes" ];`
 
 # Make all scripts executable:
 `find ~/nixos-config/ -type f -name "*.sh" -exec chmod +x {} +`
@@ -36,6 +36,7 @@ git clone https://github.com/TheTechRun/public-nixos
 cd ~
 git clone https://github.com/TheTechRun/public-nixos
 mv ~/public-nixos/ ~/nixos-config
+sudo sed -i '$ i\  # Enable flakes.\n  nix.settings.experimental-features = [ "nix-command" "flakes" ];\n' /etc/nixos/configuration.nix
 sudo cp /etc/nixos/hardware-configuration.nix ~/nixos-config/modules/system/hardware-configuration.nix
 sudo ln -sf ~/nixos-config/flake.nix /etc/nixos/flake.nix
 find ~/nixos-config/ -type f -name "*.sh" -exec chmod +x {} +
