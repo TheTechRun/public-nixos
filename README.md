@@ -14,6 +14,12 @@ cd ~
 git clone https://github.com/TheTechRun/public-nixos
 cd ~/nixos-config
 ```
+# Move nixos-config directory to home directory:
+```
+mv ~/public-nixos/nixos-config ~/
+rmdir ~/public-nixos
+```
+
 # Copy your hardware-config
 `sudo cp /etc/nixos/hardware-configuration.nix ~/nixos-config/modules/system/hardware-configuration.nix`
 
@@ -34,6 +40,8 @@ cd ~/nixos-config
 cd ~
 git clone https://github.com/TheTechRun/nixos-config
 cd ~/nixos-config
+mv ~/public-nixos/nixos-config ~/
+rmdir ~/public-nixos
 sudo cp /etc/nixos/hardware-configuration.nix ~/nixos-config/modules/system/hardware-configuration.nix
 sudo ln -sf ~/nixos-config/flake.nix /etc/nixos/flake.nix
 find ~/nixos-config/ -type f -name "*.sh" -exec chmod +x {} +
