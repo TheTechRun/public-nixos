@@ -38,6 +38,10 @@ sudo nixos-rebuild switch
 
 # Build Flake:
 `sudo nixos-rebuild switch --flake $HOME/nixos-config`
+### This process will take a while, so if you using a laptop prevent it fom falling asleep by either
+Installing caffiene
+`nix-shell -p caffeine-ng caffeine`
+Or by visiting https://nosleep.page (it is a website that functions like caffeine)
 
 # ALL-in-ONE command:
 ### Start a shell:
