@@ -36,6 +36,13 @@ sudo nixos-rebuild switch
 # Symlink flake:
 `sudo ln -sf ~/nixos-config/flake.nix /etc/nixos/flake.nix`
 
+# [Optional] Run replace-username.sh to change "nixuser" to your desired username
+`cd ~`
+`bash replace-username.sh`
+
+# [Optional] comment out any additional DE or WM you would like enabled
+`nano flake.nix`
+
 # Build Flake:
 `sudo nixos-rebuild switch --flake $HOME/nixos-config`
 
@@ -54,6 +61,10 @@ sudo nixos-rebuild switch
 sudo cp /etc/nixos/hardware-configuration.nix ~/nixos-config/modules/system/hardware-configuration.nix
 sudo ln -sf ~/nixos-config/flake.nix /etc/nixos/flake.nix
 find ~/nixos-config/ -type f -name "*.sh" -exec chmod +x {} +
+cd ~
+bash replace-username.sh
+nano flake.nix
+
 sudo nixos-rebuild switch --flake $HOME/nixos-config
 ```
 
@@ -63,7 +74,7 @@ sudo nixos-rebuild switch --flake $HOME/nixos-config
 `sudo nixos-rebuild switch --flake $HOME/nixos-config`
 
 # LOGIN:
-username:`nixuser`
+username:`nixuser` (default) or whatever you changed it to with replace-username.sh
 
 password: `abcde12345`
 
