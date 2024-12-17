@@ -1,0 +1,9 @@
+use_default_settings: true
+server:
+  secret_key: "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"  # change this!
+  limiter: false  # can be disabled for a private instance
+  image_proxy: true
+ui:
+  static_use_hash: true
+redis:
+  url: redis://localhost:6379/0
